@@ -47,7 +47,7 @@ Haz clic en los siguientes enlaces para examinar los archivos: ![HTML](https://i
 
 
 <p align="center">
-  <img src="HTML_CSS_Header-Samples/Header1/img/Business_Agency.png" alt="Header4 Image">
+  <img src="../HTML_CSS_Header-Samples/Header1/img/Business_Agency.png" alt="Header4 Image">
 </p>
 
 <p align="center">
