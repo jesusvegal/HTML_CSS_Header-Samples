@@ -174,7 +174,7 @@ Bienvenido a NFT Marketplace, el punto de encuentro donde la elegancia se fusion
 
 
 <p align="center">
-  <img src="/Header5/img/Grocery_ Store.png" alt="Header5 Image">
+  <img src="/Header5/img/Grocery_Store.png" alt="Header5 Image">
 </p> 
 
 <p align="center">
