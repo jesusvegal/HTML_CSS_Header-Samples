@@ -80,7 +80,7 @@ Un H1 visualmente destacado que comunica profesionalismo y deja una impresión d
 
 
 <p align="center">
-  <img src="../HTML_CSS_Header-Samples/Header2/img//Creative_Company.png" alt="Header4 Image">
+  <img src="/Header2/img//Creative_ Company.png" alt="Header2 Image">
 </p>
 
 <p align="center">
@@ -113,7 +113,7 @@ Un H1 visualmente destacado que comunica profesionalismo y deja una impresión d
 
 
 <p align="center">
-  <img src="../HTML_CSS_Header-Samples/Header3/img/Coworking_ Space.png" alt="Header4 Image">
+  <img src="/Header3/img/Coworking_ Space.png" alt="Header3 Image">
 </p>
 
 <p align="center">
@@ -143,7 +143,7 @@ Bienvenido a Coworking Space, un encabezado diseñado para reflejar la modernida
 
 
 <p align="center">
-  <img src="../HTML_CSS_Header-Samples/Header4/img/NFT_ Marketplace.png" alt="Header4 Image">
+  <img src="/Header4/img/NFT_ Marketplace.png" alt="Header4 Image">
 </p>
 
 
@@ -174,7 +174,7 @@ Bienvenido a NFT Marketplace, el punto de encuentro donde la elegancia se fusion
 
 
 <p align="center">
-  <img src="../HTML_CSS_Header-Samples/Header5/img/Grocery_ Store.png" alt="Header4 Image">
+  <img src="/Header5/img/Grocery_ Store.png" alt="Header5 Image">
 </p> 
 
 <p align="center">
