@@ -47,7 +47,7 @@ Haz clic en los siguientes enlaces para examinar los archivos: ![HTML](https://i
 
 
 <p align="center">
-  <img src="../Header1/img/Business_ Agency.png" alt="Header4 Image">
+  <img src="../Header1/img/Business_Agency.png" alt="Header1 Image">
 </p>
 
 <p align="center">
@@ -80,7 +80,7 @@ Un H1 visualmente destacado que comunica profesionalismo y deja una impresión d
 
 
 <p align="center">
-  <img src="../HTML_CSS_Header-Samples/Header2/img//Creative_ Company.png" alt="Header4 Image">
+  <img src="../HTML_CSS_Header-Samples/Header2/img//Creative_Company.png" alt="Header4 Image">
 </p>
 
 <p align="center">
