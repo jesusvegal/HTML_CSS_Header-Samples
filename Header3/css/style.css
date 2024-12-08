@@ -1,0 +1,859 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/PlayfairDisplay-BoldItalic.eot');
+  src: url('../fonts/PlayfairDisplay-BoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/PlayfairDisplay-BoldItalic.woff2') format('woff2'),
+      url('../fonts/PlayfairDisplay-BoldItalic.woff') format('woff'),
+      url('../fonts/PlayfairDisplay-BoldItalic.ttf') format('truetype'),
+      url('../fonts/PlayfairDisplay-BoldItalic.svg#PlayfairDisplay-BoldItalic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/PlayfairDisplay-Medium.eot');
+  src: url('../fonts/PlayfairDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/PlayfairDisplay-Medium.woff2') format('woff2'),
+      url('../fonts/PlayfairDisplay-Medium.woff') format('woff'),
+      url('../fonts/PlayfairDisplay-Medium.ttf') format('truetype'),
+      url('../fonts/PlayfairDisplay-Medium.svg#PlayfairDisplay-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/PlayfairDisplay-Regular.eot');
+  src: url('../fonts/PlayfairDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/PlayfairDisplay-Regular.woff2') format('woff2'),
+      url('../fonts/PlayfairDisplay-Regular.woff') format('woff'),
+      url('../fonts/PlayfairDisplay-Regular.ttf') format('truetype'),
+      url('../fonts/PlayfairDisplay-Regular.svg#PlayfairDisplay-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/PlayfairDisplay-ExtraBoldItalic.eot');
+  src: url('../fonts/PlayfairDisplay-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/PlayfairDisplay-ExtraBoldItalic.woff2') format('woff2'),
+      url('../fonts/PlayfairDisplay-ExtraBoldItalic.woff') format('woff'),
+      url('../fonts/PlayfairDisplay-ExtraBoldItalic.ttf') format('truetype'),
+      url('../fonts/PlayfairDisplay-ExtraBoldItalic.svg#PlayfairDisplay-ExtraBoldItalic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/PlayfairDisplay-SemiBold.eot');
+  src: url('../fonts/PlayfairDisplay-SemiBold.eot?#iefix') format('embedded-opentype'),
+      url('../fontsPlayfairDisplay-SemiBold.woff2') format('woff2'),
+      url('../fonts/PlayfairDisplay-SemiBold.woff') format('woff'),
+      url('../fonts/PlayfairDisplay-SemiBold.ttf') format('truetype'),
+      url('../fonts/PlayfairDisplay-SemiBold.svg#PlayfairDisplay-SemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/PlayfairDisplay-Bold.eot');
+  src: url('../fonts/PlayfairDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/PlayfairDisplay-Bold.woff2') format('woff2'),
+      url('../fonts/PlayfairDisplay-Bold.woff') format('woff'),
+      url('../fonts/PlayfairDisplay-Bold.ttf') format('truetype'),
+      url('../fonts/PlayfairDisplay-Bold.svg#PlayfairDisplay-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/PlayfairDisplay-ExtraBold.eot');
+  src: url('../fonts/PlayfairDisplay-ExtraBold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/PlayfairDisplay-ExtraBold.woff2') format('woff2'),
+      url('../fonts/PlayfairDisplay-ExtraBold.woff') format('woff'),
+      url('../fonts/PlayfairDisplay-ExtraBold.ttf') format('truetype'),
+      url('../fonts/PlayfairDisplay-ExtraBold.svg#PlayfairDisplay-ExtraBold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/PlayfairDisplay-Regular_1.eot');
+  src: url('../fonts/PlayfairDisplay-Regular_1.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/PlayfairDisplay-Regular_1.woff2') format('woff2'),
+      url('../fonts/PlayfairDisplay-Regular_1.woff') format('woff'),
+      url('../fonts/PlayfairDisplay-Regular_1.ttf') format('truetype'),
+      url('../fonts/PlayfairDisplay-Regular_1.svg#PlayfairDisplay-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/PlayfairDisplay-SemiBoldItalic.eot');
+  src: url('../fonts/PlayfairDisplay-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/PlayfairDisplay-SemiBoldItalic.woff2') format('woff2'),
+      url('../fonts/PlayfairDisplay-SemiBoldItalic.woff') format('woff'),
+      url('../fonts/PlayfairDisplay-SemiBoldItalic.ttf') format('truetype'),
+      url('../fonts/PlayfairDisplay-SemiBoldItalic.svg#PlayfairDisplay-SemiBoldItalic') format('svg');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fontsPlayfairDisplay-Italic.eot');
+  src: url('../fonts/PlayfairDisplay-Italic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/PlayfairDisplay-Italic.woff2') format('woff2'),
+      url('../fonts/PlayfairDisplay-Italic.woff') format('woff'),
+      url('../fonts/PlayfairDisplay-Italic.ttf') format('truetype'),
+      url('../fonts/PlayfairDisplay-Italic.svg#PlayfairDisplay-Italic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/PlayfairDisplay-Italic_1.eot');
+  src: url('../fonts/PlayfairDisplay-Italic_1.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/PlayfairDisplay-Italic_1.woff2') format('woff2'),
+      url('../fonts/PlayfairDisplay-Italic_1.woff') format('woff'),
+      url('../fonts/PlayfairDisplay-Italic_1.ttf') format('truetype'),
+      url('../fonts/PlayfairDisplay-Italic_1.svg#PlayfairDisplay-Italic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/PlayfairDisplay-Black.eot');
+  src: url('../fonts/PlayfairDisplay-Black.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/PlayfairDisplay-Black.woff2') format('woff2'),
+      url('../fonts/PlayfairDisplay-Black.woff') format('woff'),
+      url('../fonts/PlayfairDisplay-Black.ttf') format('truetype'),
+      url('../fonts/PlayfairDisplay-Black.svg#PlayfairDisplay-Black') format('svg');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/PlayfairDisplay-BlackItalic.eot');
+  src: url('../fonts/PlayfairDisplay-BlackItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/PlayfairDisplay-BlackItalic.woff2') format('woff2'),
+      url('../fonts/PlayfairDisplay-BlackItalic.woff') format('woff'),
+      url('../fonts/PlayfairDisplay-BlackItalic.ttf') format('truetype'),
+      url('../fonts/PlayfairDisplay-BlackItalic.svg#PlayfairDisplay-BlackItalic') format('svg');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/PlayfairDisplay-MediumItalic.eot');
+  src: url('../fonts/PlayfairDisplay-MediumItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/PlayfairDisplay-MediumItalic.woff2') format('woff2'),
+      url('../fonts/PlayfairDisplay-MediumItalic.woff') format('woff'),
+      url('../fonts/PlayfairDisplay-MediumItalic.ttf') format('truetype'),
+      url('../fonts/PlayfairDisplay-MediumItalic.svg#PlayfairDisplay-MediumItalic') format('svg');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-ThinItalic.eot');
+  src: url('../fonts/Poppins-ThinItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Poppins-ThinItalic.woff2') format('woff2'),
+      url('../fontsPoppins-ThinItalic.woff') format('woff'),
+      url('../fonts/Poppins-ThinItalic.ttf') format('truetype'),
+      url('../fonts/Poppins-ThinItalic.svg#Poppins-ThinItalic') format('svg');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-ExtraLight.eot');
+  src: url('../fonts/Poppins-ExtraLight.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Poppins-ExtraLight.woff2') format('woff2'),
+      url('../fonts/Poppins-ExtraLight.woff') format('woff'),
+      url('../fonts/Poppins-ExtraLight.ttf') format('truetype'),
+      url('../fonts/Poppins-ExtraLight.svg#Poppins-ExtraLight') format('svg');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-ExtraLightItalic.eot');
+  src: url('../fonts/Poppins-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Poppins-ExtraLightItalic.woff2') format('woff2'),
+      url('../fonts/Poppins-ExtraLightItalic.woff') format('woff'),
+      url('../fonts/Poppins-ExtraLightItalic.ttf') format('truetype'),
+      url('../fonts/Poppins-ExtraLightItalic.svg#Poppins-ExtraLightItalic') format('svg');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-BoldItalic.eot');
+  src: url('../fonts/Poppins-BoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Poppins-BoldItalic.woff2') format('woff2'),
+      url('../fonts/Poppins-BoldItalic.woff') format('woff'),
+      url('../fonts/Poppins-BoldItalic.ttf') format('truetype'),
+      url('../fonts/Poppins-BoldItalic.svg#Poppins-BoldItalic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Italic.eot');
+  src: url('../fonts/Poppins-Italic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Poppins-Italic.woff2') format('woff2'),
+      url('../fonts/Poppins-Italic.woff') format('woff'),
+      url('../fonts/Poppins-Italic.ttf') format('truetype'),
+      url('../fonts/Poppins-Italic.svg#Poppins-Italic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-LightItalic.eot');
+  src: url('../fonts/Poppins-LightItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Poppins-LightItalic.woff2') format('woff2'),
+      url('../fonts/Poppins-LightItalic.woff') format('woff'),
+      url('../fontsPoppins-LightItalic.ttf') format('truetype'),
+      url('../fonts/Poppins-LightItalic.svg#Poppins-LightItalic') format('svg');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-BlackItalic.eot');
+  src: url('../fonts/Poppins-Bl../fonts/ackItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Poppins-BlackItalic.woff2') format('woff2'),
+      url('../fonts/Poppins-BlackItalic.woff') format('woff'),
+      url('../fonts/Poppins-BlackItalic.ttf') format('truetype'),
+      url('../fonts/Poppins-BlackItalic.svg#Poppins-BlackItalic') format('svg');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-SemiBoldItalic.eot');
+  src: url('../fonts/Poppins-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Poppins-SemiBoldItalic.woff2') format('woff2'),
+      url('../fonts/Poppins-SemiBoldItalic.woff') format('woff'),
+      url('../fonts/Poppins-SemiBoldItalic.ttf') format('truetype'),
+      url('../fonts/Poppins-SemiBoldItalic.svg#Poppins-SemiBoldItalic') format('svg');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Light.eot');
+  src: url('../fonts/Poppins-Light.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Poppins-Light.woff2') format('woff2'),
+      url('../fonts/Poppins-Light.woff') format('woff'),
+      url('../fonts/Poppins-Light.ttf') format('truetype'),
+      url('../fonts/Poppins-Light.svg#Poppins-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Black.eot');
+  src: url('../fonts/Poppins-Black.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Poppins-Black.woff2') format('woff2'),
+      url('../fonts/Poppins-Black.woff') format('woff'),
+      url('../fonts/Poppins-Black.ttf') format('truetype'),
+      url('../fonts/Poppins-Black.svg#Poppins-Black') format('svg');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-ExtraBold.eot');
+  src: url('../fonts/Poppins-ExtraBold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Poppins-ExtraBold.woff2') format('woff2'),
+      url('../fonts/Poppins-ExtraBold.woff') format('woff'),
+      url('../fonts/Poppins-ExtraBold.ttf') format('truetype'),
+      url('../fonts/Poppins-ExtraBold.svg#Poppins-ExtraBold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-MediumItalic.eot');
+  src: url('..fonts/Poppins-MediumItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Poppins-MediumItalic.woff2') format('woff2'),
+      url('../fonts/Poppins-MediumItalic.woff') format('woff'),
+      url('../fonts/Poppins-MediumItalic.ttf') format('truetype'),
+      url('../fonts/Poppins-MediumItalic.svg#Poppins-MediumItalic') format('svg');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-ExtraBoldItalic.eot');
+  src: url('../fonts/Poppins-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Poppins-ExtraBoldItalic.woff2') format('woff2'),
+      url('../fonts/Poppins-ExtraBoldItalic.woff') format('woff'),
+      url('../fonts/Poppins-ExtraBoldItalic.ttf') format('truetype'),
+      url('../fonts/Poppins-ExtraBoldItalic.svg#Poppins-ExtraBoldItalic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-SemiBold.eot');
+  src: url('../fonts/Poppins-SemiBold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Poppins-SemiBold.woff2') format('woff2'),
+      url('../fonts/Poppins-SemiBold.woff') format('woff'),
+      url('../fonts/Poppins-SemiBold.ttf') format('truetype'),
+      url('../fonts/Poppins-SemiBold.svg#Poppins-SemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Thin.eot');
+  src: url('../fonts/Poppins-Thin.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Poppins-Thin.woff2') format('woff2'),
+      url('../fonts/Poppins-Thin.woff') format('woff'),
+      url('../fonts/Poppins-Thin.ttf') format('truetype'),
+      url('../fonts/Poppins-Thin.svg#Poppins-Thin') format('svg');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Medium.eot');
+  src: url('../fonts/Poppins-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Poppins-Medium.woff2') format('woff2'),
+      url('../fonts/Poppins-Medium.woff') format('woff'),
+      url('../fonts/Poppins-Medium.ttf') format('truetype'),
+      url('../fonts/Poppins-Medium.svg#Poppins-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.eot');
+  src: url('../fonts/Poppins-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Poppins-Regular.woff2') format('woff2'),
+      url('../fonts/Poppins-Regular.woff') format('woff'),
+      url('../fonts/Poppins-Regular.ttf') format('truetype'),
+      url('../fonts/Poppins-Regular.svg#Poppins-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Bold.eot');
+  src: url('../fonts/Poppins-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Poppins-Bold.woff2') format('woff2'),
+      url('../fonts/Poppins-Bold.woff') format('woff'),
+      url('../fontsPoppins-Bold.ttf') format('truetype'),
+      url('../fonts/Poppins-Bold.svg#Poppins-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+  /*
+   * Aquí empieza el proyecto
+   */
+
+   :root{
+    --primary-font: 'Poppins', sans-serif;
+    --secondary-font: 'Playfair Display', sans-serif;
+    --black: #313131;
+    --brown: #9B9A78;
+    --max-width-page: 1400px;
+   }
+
+   body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--primary-font);
+   }
+
+   .container{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width-page);
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+   }
+
+   header.header{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+   }
+
+   .navPrincipal ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 50px;
+   }
+
+   .navPrincipal a{
+    color: var(--black);
+    text-decoration: none;
+    transition: all .8s ease;
+   }
+
+   .navPrincipal a:hover{
+    color: var(--brown)
+   }
+
+   .navPrincipal a.active{
+    color: var(--brown);
+   }
+
+   .login ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+   }
+
+   .login img:hover{
+    opacity: 0.7;
+   }
+
+
+   .login a{
+    color: var(--black);
+    text-decoration: none;
+   }
+
+   a.button{
+    display: inline-block;
+    background-color: var(--brown);
+    color: white;
+    padding: 14px 30px;
+    transition: all .8s ease;
+  }
+
+  a.button:hover{
+    background-color: var(--black);
+  }
+
+  section.hero{
+    display: flex;
+    justify-content: flex-end;
+    background-image: url(../img/hero-background.jpg);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-bottom: 30px;
+  }
+
+  .hero__content{
+    width: 50%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  .hero__header{
+    background-color: rgba(255, 255, 255, 0.70);
+    backdrop-filter: blur(8px);
+    padding: 35px;
+  }
+
+  .hero h1{
+    font-family: var(--secondary-font);
+    font-size: 48px;
+    line-height: 55px;
+    max-width: 500;
+    margin: 0;
+    position: relative;
+  }
+
+  .hero h1::before{
+    content: '';
+    height: 8px;
+    width: 72px;
+    position: absolute;
+    background-color: var(--brown);
+    right: 0;
+    top: 22px;
+  }
+
+  .hero__header p{
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--brown);
+  }
+
+  .hero__list{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .hero__list ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 60%;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .hero__list ul li{
+    font-weight: 300;
+    background-image: url('../img/icon-list-item.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 20px;
+    padding-left: 30px;
+  }
+
+  .hero__list ul li:hover{
+    opacity: 0.7;
+  }
+
+  .coworking-info{
+    display: flex;
+    justify-content: space-between;
+    gap: 224px;
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+
+  .coworking-info img{
+    width: 60px;
+    margin-bottom: 10px;
+  }
+
+  .coworking-info img:hover{
+    opacity: 0.7;
+  }
+
+  .coworking-info h3{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  .coworking-info p{
+    font-weight: 300;
+    color: var(--brown);
+    margin: 0;
+  }
